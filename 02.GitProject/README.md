@@ -18,3 +18,5 @@ Creating An Index.Html file
 Preview of Website Creation
 
 ![Initial Preview of Website Created](./img/5.InitialWebCreation.png)
+
+![](./img/)
