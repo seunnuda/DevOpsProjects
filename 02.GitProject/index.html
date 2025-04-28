@@ -24,27 +24,41 @@
         }
 
         header {
-            background-color: #333; /* Dark background for the header */
+            background-color: #444; /* Add a slightly lighter background to the nav */
             color: #fff; /* White text in the header */
-            padding: 1em 0; /* Some vertical padding */
+            padding: 5px 0; /* Add a little padding around the nav itself */
+	    display: flex; /* Enable Flexbox for the header */
+	    align-items: center; /* Vertically align items (logo and nav) */
+	    justify-content: space-between; /* Put space between logo and nav */
+	}
+
+	.logo a {
+	    display: inline-block; /* Make the logo link a block */
+	}
+
+	.logo img {
+	    height: 50px; /* Set the logo height */
+	    vertical-align: middle; /* Align logo with navigation text */
         }
 
         nav ul {
-            list-style: none; /* Remove bullet points from the list */
-            padding: 0;
-            margin: 0;
-            text-align: center; /* Center the navigation links */
-        }
+	    list-style: none;
+	    padding: 10px 0; /* Add some top and bottom padding to the entire list */
+	    margin: 0;
+	    text-align: center;
+	}
 
-        nav ul li {
-            display: inline; /* Make list items appear horizontally */
-            margin: 0 1em; /* Add some horizontal spacing between links */
-        }
+	nav ul li {
+	    display: inline;
+	    margin: 0 15px; /* Increase the horizontal spacing between links */
+	}
 
-        nav a {
-            color: #fff; /* White link text */
-            text-decoration: none; /* Remove underlines from links */
-        }
+	nav a {
+	    color: #fff;
+	    text-decoration: none;
+	    padding: 8px 12px; /* Add padding around the link text for better click area */
+	    border-radius: 5px; /* Optional: Add slightly rounded corners to the link area */
+	}
 
         main {
             padding: 20px; /* Add some padding around the main content */
@@ -83,6 +97,11 @@
 </head>
 <body>
     <header>
+	<div class="logo">
+	    <a href="#">
+        	<img src="ailogo.png" alt="AI-Start Company Logo" height="50">
+    	    </a>
+        </div>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
