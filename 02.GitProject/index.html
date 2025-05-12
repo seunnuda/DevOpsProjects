@@ -3,17 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="AI-Start Company - Pioneering AI solutions for businesses.">
+	<meta name="keywords" content="AI, Artificial Intelligence, Machine Learning, NLP, Computer Vision">
+	<meta name="author" content="AI-Start Company">
     <title>AI-Start Company</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap" rel="stylesheet">
      <style>
         body {
-            .comic-relief-regular {
-	     font-family: "Comic Relief", system-ui;
+        
+	     font-family: "Comic Relief", system-ui, sans-serif;
 	     font-weight: 400;
 	     font-style: normal;
-        }
+		 background-image: 
+		 url('https://cryptointelligence.b-cdn.net/wp-content/uploads/2023/07/AI-3.jpg'),
+		 url('https://logifusion.com/wp-content/uploads/2023/05/9ef162b5-99d9-4ac5-8d98-7ddf7e51c84b.webp');
+		 background-color: lightpink;
+		 background-repeat: repeat; /* Repeat the background image */
+    	 background-size: 400px 400px; /* Keep the original size of the image */
+    	 background-position: top left; /* Start repeating from the top-left corner */
+		 background-attachment: fixed; /* Keep the background fixed while scrolling */
+    }
 
 	    .comic-relief-bold {
 	     font-family: "Comic Relief", system-ui;
@@ -21,15 +32,16 @@
 	     font-style: normal;
 	}
 
-        }
+    
 
         header {
-            background-color: #444; /* Add a slightly lighter background to the nav */
-            color: #fff; /* White text in the header */
+            background-color: whitesmoke; /* Add a slightly lighter background to the nav */
+            color: blanchedalmond; /* White text in the header */
             padding: 5px 0; /* Add a little padding around the nav itself */
-	    display: flex; /* Enable Flexbox for the header */
-	    align-items: center; /* Vertically align items (logo and nav) */
-	    justify-content: space-between; /* Put space between logo and nav */
+	    	display: flex; /* Enable Flexbox for the header */
+	    	align-items: center; /* Vertically align items (logo and nav) */
+	    	justify-content: space-between; /* Put space between logo and nav */
+			position: relative; /* Allow overlapping elements */
 	}
 
 	.logo a {
@@ -37,9 +49,14 @@
 	}
 
 	.logo img {
-	    height: 50px; /* Set the logo height */
-	    vertical-align: middle; /* Align logo with navigation text */
-        }
+		<img src="./img/ailogo.png" alt="AI-Start Company Logo" height="50">;
+    	height: 80px; /* Increase the height */
+    	width: auto; /* Maintain aspect ratio */
+    	object-fit: contain; /* Ensure the image fits within the dimensions */
+    	border: 2px solid #333; /* Add a bold border */
+    	border-radius: 5px; /* Optional: Rounded corners */
+    	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add a shadow for emphasis */
+	}
 
 	nav a:hover {
 	    background-color: #555; /* Darker shade on hover */
@@ -69,13 +86,16 @@
             padding: 20px; /* Add some padding around the main content */
             max-width: 960px; /* Limit the maximum width of the main content for better readability on larger screens */
             margin: 20px auto; /* Center the main content horizontally with some top/bottom margin */
-            background-color: #fff; /* White background for the main content area */
+            background-color: rgba(255, 255, 255, o.8); /* White background with 80% opacity */
             border-radius: 8px; /* Slightly rounded corners */
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
         }
 
         section {
             margin-bottom: 2em; /* Add spacing between sections */
+			background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+    		padding: 15px;
+    		border-radius: 8px;
         }
 
         h1, h2, h3 {
@@ -92,11 +112,307 @@
         footer {
             text-align: center; /* Center the footer text */
             padding: 1em 0;
-            background-color: #333;
+            background-color: To address both issues (logo not displaying and making the web content slightly transparent to show the background image), here are the fixes:
+
+---
+
+### **1. Fix the Logo Issue**
+The `<img>` tag for the logo is incorrectly written. Replace this:
+
+```html
+<img src="<img src="./img/ailogo.png" alt="AI-Start Company Logo" height="50">" alt="AI-Start Company Logo" height="50">
+```
+
+With this:
+
+```html
+<img src="./img/ailogo.png" alt="AI-Start Company Logo" height="50">
+```
+
+### **Corrected Header Section:**
+```html
+<header>
+    <div class="logo">
+        <a href="#">
+            <img src="./img/ailogo.png" alt="AI-Start Company Logo" height="50">
+        </a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+```
+
+---
+
+### **2. Make Web Content Transparent**
+To make the content slightly transparent so the background image is visible, you can use the `rgba()` color format or the `opacity` property. Here's how to adjust the transparency for specific sections:
+
+#### **CSS Changes:**
+Update the `main` and `section` styles to include transparency:
+
+```css
+main {
+    padding: 20px;
+    max-width: 960px;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.8); /* White background with 80% opacity */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    margin-bottom: 2em;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+    padding: 15px;
+    border-radius: 8px;
+}
+```
+
+---
+
+### **3. Optional: Add Transparency to the Footer**
+If you want the footer to also have some transparency, update its style:
+
+```css
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: rgba(51, 51, 51, 0.8); /* Dark background with 80% opacity */
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+```
+
+---
+
+### **4. Final Adjustments**
+Here’s how the updated CSS section should look:
+
+```css
+body {
+    font-family: "Comic Relief", system-ui, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-image: url('https://cryptointelligence.b-cdn.net/wp-content/uploads/2023/07/AI-3.jpg');
+    background-color: To address both issues (logo not displaying and making the web content slightly transparent to show the background image), here are the fixes:
+
+---
+
+### **1. Fix the Logo Issue**
+The `<img>` tag for the logo is incorrectly written. Replace this:
+
+```html
+<img src="<img src="./img/ailogo.png" alt="AI-Start Company Logo" height="50">" alt="AI-Start Company Logo" height="50">
+```
+
+With this:
+
+```html
+<img src="./img/ailogo.png" alt="AI-Start Company Logo" height="50">
+```
+
+### **Corrected Header Section:**
+```html
+<header>
+    <div class="logo">
+        <a href="#">
+            <img src="./img/ailogo.png" alt="AI-Start Company Logo" height="50">
+        </a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+```
+
+---
+
+### **2. Make Web Content Transparent**
+To make the content slightly transparent so the background image is visible, you can use the `rgba()` color format or the `opacity` property. Here's how to adjust the transparency for specific sections:
+
+#### **CSS Changes:**
+Update the `main` and `section` styles to include transparency:
+
+```css
+main {
+    padding: 20px;
+    max-width: 960px;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.8); /* White background with 80% opacity */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    margin-bottom: 2em;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+    padding: 15px;
+    border-radius: 8px;
+}
+```
+
+---
+
+### **3. Optional: Add Transparency to the Footer**
+If you want the footer to also have some transparency, update its style:
+
+```css
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: rgba(51, 51, 51, 0.8); /* Dark background with 80% opacity */
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+```
+
+---
+
+### **4. Final Adjustments**
+Here’s how the updated CSS section should look:
+
+```css
+body {
+    font-family: "Comic Relief", system-ui, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-image: url('https://cryptointelligence.b-cdn.net/wp-content/uploads/2023/07/AI-3.jpg');
+    background-color: lightpink;
+    background-size: cover; /* Ensure the background image covers the entire screen */
+    background-attachment: fixed; /* Keep the background fixed while scrolling */
+}
+
+main {
+    padding: 20px;
+    max-width: 960px;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.8); /* White background with 80% opacity */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    margin-bottom: 2em;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+    padding: 15px;
+    border-radius: 8px;
+}
+
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: rgba(51, 51, 51, 0.8); /* Dark background with 80% opacity */
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+```
+
+---
+
+### **5. Test the Changes**
+- Save the file and open it in your browser.
+- Verify that:
+  - The logo is now displayed correctly.
+  - The content sections (`main`, `section`, and `footer`) are slightly transparent, allowing the background image to show through.
+
+Let me know if you need further assistance! 😊;
+    background-size: cover; /* Ensure the background image covers the entire screen */
+    background-attachment: fixed; /* Keep the background fixed while scrolling */
+}
+
+main {
+    padding: 20px;
+    max-width: 960px;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.8); /* White background with 80% opacity */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    margin-bottom: 2em;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+    padding: 15px;
+    border-radius: 8px;
+}
+
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: rgba(51, 51, 51, 0.8); /* Dark background with 80% opacity */
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+```
+
+---
+
+### **5. Test the Changes**
+- Save the file and open it in your browser.
+- Verify that:
+  - The logo is now displayed correctly.
+  - The content sections (`main`, `section`, and `footer`) are slightly transparent, allowing the background image to show through.
+
+Let me know if you need further assistance! 😊;
             color: #fff;
-            position: sticky; /* Stick the footer to the bottom */
+            position: relative; /* Stick the footer to the bottom */
             bottom: 0;
             width: 100%;
+	}
+		/* Existing styles... */
+
+	@media (max-width: 768px) {
+    	header {
+        	flex-direction: column;
+        	align-items: flex-start;
+		}						
+
+    	nav ul {
+    	    text-align: left;
+	   	}
+
+    	.service-item {
+        	padding: 10px;
+        	margin-bottom: 1em;
+    	}
+
+    	footer {
+        	font-size: 0.9em;
+    	}
+	}
+
+	@media (max-width: 480px) {
+		body {
+        	font-size: 14px;
+    	}
+
+    	header {
+        	padding: 10px;
+    	}
+
+    	nav ul li {
+        	display: block;
+        	margin: 10px 0;
+    	}
 	}
     </style>   
 </head>
@@ -104,7 +420,7 @@
     <header>
 	<div class="logo">
 	    <a href="#">
-        	<img src="<img src="./img/ailogo.png" alt="AI-Start Company Logo" height="50">" alt="AI-Start Company Logo" height="50">
+        	<img src="./img/ailogo.png" alt="AI-Start Company Logo" height="50">" 
     	    </a>
         </div>
         <nav>
@@ -188,7 +504,7 @@
 	        <ul>
         	    <li><a href="https://github.com/seunnuda/DevOpsProjects.git" target="_blank">LinkedIn</a></li>
 	            <li><a href="https://github.com/seunnuda/DevOpsProjects.git" target="_blank">Twitter</a></li>
-        	    </ul>
+        	</ul>
 	        <p>Follow us on social media for the latest updates and news.</p>
 	    </div>
 
