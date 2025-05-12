@@ -61,7 +61,7 @@ Jerry Stage Index.Html Commit And Push Origin Contact Info To Main Repo
 
 ![StagingCommit&PushJerry'sCollaborationToGitHubFromHisLocalRepo](./img/18.JerrySeunnuda2AddCommitPushOrPublishedToGitHubRepoBranchChangesIndexHtmlContactInfo.png)
 
-Reviewing And Pull Tom's Request Branch To Merge With Main Branch After Resolving Any Conflick If Any
+Reviewing And Pull Tom's Request Branch To Merge With Main Branch
 
 ![PullRequest](./img/12.SeunnudaPullRequest.png)
 ![Reviewing&UpdateNavigationBranch](./img/13.SeunnudaPulling&ReviewingUpdateNavigationByTomSeunnuda1.png)
